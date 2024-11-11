@@ -7,6 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './support-tickets.component.html',
   styleUrl: './support-tickets.component.css'
 })
-export class SupportTicketsComponent {
-
-}
+export class SupportTicketsComponent {};
