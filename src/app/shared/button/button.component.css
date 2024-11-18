@@ -1,4 +1,8 @@
-button {
+/* Using the CSS :host selector to select the host element. Every component has a host element.
+In our component here that is the element designated by our selector in the .ts file, the 
+"button[appButton] element. Using :host makes these styles global. */
+
+:host {
     display: inline-block;
     padding: 0.65rem 1.35rem;
     border-radius: 0.25rem;
@@ -10,7 +14,7 @@ button {
     border: none;
 }
 
-button:hover {
+:host:hover {
     background-color: #551b98;
 }
 
@@ -20,6 +24,6 @@ button:hover {
     transition: transform 0.2s ease-in-out;
 }
 
-button:hover .icon {
+:host:hover .icon {
     transform: translateX(4px);
 }
