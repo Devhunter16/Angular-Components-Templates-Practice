@@ -1,13 +1,18 @@
-<form>
+<form (ngSubmit)="onSubmit(titleInput.value, textInput.value)">
     <app-control label="Title">
-        <input name="title" id="title" />
+        <!-- Using a hashtag creates a template variable. An Angular feature 
+                                        where the element to where the variable is added is stored in that 
+                                        variable. The variable then becomes available anywhere within the 
+                                        template. Here we pass that variable which stores our input element
+                                        to our onSubmit function as an argument -->
+        <input name="title" id="title" #titleInput />
     </app-control>
     <app-control label="Request">
-        <textarea name="request" id="request" rows="3"></textarea>
+        <textarea name="request" id="request" rows="3" #textInput></textarea>
     </app-control>
     <p>
         <button appButton>
-            Logout
+            Submit
         </button>
     </p>
 </form>
